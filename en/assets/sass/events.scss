@@ -1,0 +1,153 @@
+// Start Import SCSS Files
+@import "all-scss-files";
+//-----------------------------------------
+
+/* Start NavBar Style */
+.logo {
+    display: flex !important;
+}
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Gallery Section Style */
+section.events {
+    position: relative;
+    padding: 170px 0 70px;
+    background: url(../images/bg/bg-01.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include full-contain;
+        background: #000;
+        opacity: .8;
+    }
+
+
+    .content {
+        .row > div {
+            margin-bottom: 30px !important;
+        }
+
+        .item {
+            position: relative;
+
+            .img-contain {
+                position: relative;
+                max-height: 300px;
+                overflow: hidden;
+
+                img {
+                    max-height: 300px;
+                    @include transition(all, .3s);
+                }
+
+                .date {
+                    position: absolute;
+                    width: fit-content;
+                    padding: 0 20px;
+                    background: $mainColor;
+                    left: 0;
+                    bottom: 0;
+                    text-transform: capitalize;
+                    z-index: 3;
+
+                    span {
+                        color: #fff;
+                        font-size: 55px;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .item-footer {
+                background: $logoColor;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                p {
+                    color: #fff;
+                    font-size: 24px;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                }
+
+                small {
+                    color: #fff;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                }
+
+                a {
+                    background-color: #fff;
+                    color: $mainColor;
+                    padding: 15px 10px;
+                    border: 1px solid #fff;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 600;
+                    border-radius: 4px;
+                    line-height: 14px;
+                    outline: none;
+                    @include flex-center;
+                    @include transition(all, .2s);
+
+                    &:hover {
+                        background: $mainColor;
+                        border-color: $mainColor;
+                        color: #fff;
+                    }
+                }
+            }
+
+            &:hover img {
+                filter: brightness(70%);
+            }
+        }
+    }
+}
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Media Query */
+@media (max-width: 991px) {
+    section.events .content .item .img-contain .date span {
+      font-size: 45px;
+    }
+  }
+@media (max-width: 768px) {
+section.events .content .item .img-contain .date span {
+    font-size: 35px;
+}
+section.events .content .item .item-footer p {
+    font-size: 18px;
+    font-weight: bold;
+}
+section.events .content .item .item-footer a {
+    font-size: 11px;
+    line-height: 11px;
+    padding: 10px;
+}
+}
+@media (max-width: 576px) {
+    section.events .content .row > div {
+        margin-bottom: 15px !important;
+        .item-footer {            
+            padding: 14px;
+        }
+    }
+    section.events .content .item .item-footer small {
+        display: block;
+        width: 90%;
+    }
+    section.events .content .item .img-contain .date span {
+        font-size: 30px
+    }
+}

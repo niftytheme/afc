@@ -1,0 +1,47 @@
+// Border Radius
+@mixin bradius($val) {
+    border-radius: $val;
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+}
+// Display Flex
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+// Use Transform To Center Element
+@mixin traCenter {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+// Full Width and Height
+@mixin full-contain {
+    height: 100%;
+    width: 100%;
+}
+// Transition
+@mixin transition($type, $val:"") {
+    -webkit-transition: $type $val ease-in-out;
+    -moz-transition: $type $val ease-in-out;
+    -ms-transition: $type $val ease-in-out;
+    -o-transition: $type $val ease-in-out;
+    transition: $type $val ease-in-out;
+}
+// Box-Shadow
+@mixin box-shadow($val) {
+  -webkit-box-shadow: 0px 0px 30px -4px $val;
+  -moz-box-shadow: 0px 0px 30px -4px $val;
+  box-shadow: 0px 0px 30px -4px $val;
+}
+// Logo-Shadow
+@mixin logoShadow($val) {
+  -webkit-box-shadow: 0px 2px 9px -2px $val;
+  -moz-box-shadow: 0px 2px 9px -2px $val;
+  box-shadow: 0px 2px 9px -2px $val;
+}
+// Main Section Padding
+@mixin s-padding {
+    padding: 70px 0;
+}

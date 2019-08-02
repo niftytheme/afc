@@ -1,0 +1,318 @@
+// Import Main File
+@import "all-scss-files";
+//-----------------------------------------
+
+/* Start NavBar Style */
+nav {
+    position: fixed;
+    z-index: 9;
+    height: 100px;
+    width: 100%;
+    left: 0;
+    top: -5px;
+    @include transition(all, .3s);
+    /* Start Overlay */
+    .overlay {
+      position: absolute;
+      left: -400px;
+      top: 0;
+      width: 400px;
+      height: 100%;
+      border-radius: 4px;
+      opacity: .3;
+      /* Linear-Gradient */
+      background: -moz-linear-gradient(left, rgba(255,255,255,0) -1%, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 3%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+      background: -webkit-linear-gradient(left, rgba(255,255,255,0) -1%,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 3%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%);
+      background: linear-gradient(to right, rgba(255,255,255,0) -1%,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 3%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%);
+    }
+    /* Start Logo Contain */
+    .logo {
+      position: absolute;
+      top: 0;
+      display: none;
+      left: 35px;
+      height: 100%;
+      background: #fff;
+      padding: 20px;
+      img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80px;
+        filter: contrast(200%);
+      }
+    }
+    .nav-btn {
+        background:#fff;
+        color: $logoColor;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        @include flex-center;
+        position: relative;
+        top: 53%;
+        left: calc(100% - 85px);
+        transform: translateY(-50%) rotate(0deg);
+        z-index: 5;
+        cursor: pointer;
+        outline: none;
+        @include transition(all ,.5s);
+        i {
+            color: $logoColor;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            @include traCenter;
+            height: 65px;
+            width: 65px;
+            border: 2px solid #fff;
+            opacity: .7;
+            border-radius: 50%;
+            animation: r_size 2s linear infinite;
+        }
+        .close-btn {
+            display: none;
+        }
+    }
+    .nav-btn.open {
+        transform: translateY(-50%) rotate(360deg);
+        .open-btn {
+            display: none;
+        }
+        .close-btn {
+            display: block;
+        }
+    }
+    .nav-contain {
+        position: relative;
+        height: 101vh;
+        width: 100%;
+        top: -46px;
+        visibility: hidden;
+        > div:not(.nav-elements) {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 3;
+            left: -20%;
+            top: 0;
+            transform: skewX(-45deg) translateX(-80%);
+            transform-origin: 100% 100% 0;
+        }        
+        .nav-layer-1 {
+            @include transition(all, .9s);
+            .lang-bar {
+                position: absolute;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 80px !important;                
+                z-index: 3;         
+                @include transition(all, .9s);   
+                display: flex;
+                align-items: center;  
+                
+                .a-contain {
+                    margin-left: 15px;
+                    
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        border:1px solid  #fff;
+                        width: 50px;
+                        height: 50px;
+                        font-weight: bold;
+                        @include flex-center;
+                        border-radius: 50%;
+                        font-size: 14px;
+                        letter-spacing: 0;
+                    }
+                }
+            }
+        }
+        .nav-layer-2 {
+            @include transition(all,.7s);
+        }
+        .nav-layer-3 {
+            @include transition(all,.5s);
+        }
+        .nav-layer-4 {
+            @include transition(all,.3s);
+        }
+        .nav-layer-1.show {
+            transform: skewX(-45deg) translateX(-70%) !important;
+            background: $layerColor;
+            @include transition(all,.3s);
+            .lang-bar {
+                background: #1d1d1d;
+            }
+        }
+        .nav-layer-2.show {
+            transform: skewX(-45deg) translateX(-60%) !important;
+            background: $layerColor;
+            opacity: .7;
+            @include transition(all,.5s);
+        }
+        .nav-layer-3.show {
+            transform: skewX(-45deg) translateX(-50%) !important;
+            background: $layerColor;
+            opacity: .4;
+            @include transition(all,.7s);
+        }
+        .nav-layer-4.show {
+            transform: skewX(-45deg) translateX(-40%) !important;
+            background: $layerColor;
+            opacity: .2;
+            @include transition(all,.9s);
+        }
+        /* Start NavBar Elements / Links */
+        .nav-elements {
+            z-index: 6;
+            top: 50%;
+            left: 20px;
+            position: fixed;
+            transform: translateY(-50%);
+            ul {
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                visibility: hidden;
+                width: 0;
+                @include transition(all,.3s);
+                li {
+                    list-style-type: none;
+                    font-weight: bold;
+                    a {
+                        color: #fff;
+                        display: block;
+                        width: 200px;
+                        border-bottom: 1px solid rgba(255,255,255,.2);
+                        padding: 5px 10px;
+                        text-decoration: none;
+                        text-transform: capitalize;
+                        @include transition(all,.3s);
+                        &:hover {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+            .show {
+                visibility: visible;
+                width: 100%;
+                @include transition(all,2s);
+            }
+        }
+    }
+    .nav-contain.show {
+        visibility: visible;
+    }
+    &.scrolled {
+      background: rgba(0, 132, 255, 0.5);
+      /* Box-Shadow */
+      @include logoShadow(rgba(0,0,0,.1));
+      .overlay {
+        left: 100%;
+        /* Transition */
+        @include transition(left, .5s);
+      }
+    }
+}
+/* Language Bar */
+@keyframes r_size {
+    0% {height: 65px; width: 65px;}
+    25% {height: 50px; width: 50px;}
+    50% {height: 65px; width: 65px;}
+    75% {height: 50px; width: 50px;}
+    100% {height: 65px; width: 65px;}
+}
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Footer Style */
+footer {
+    background-color: $logoColor;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+  
+    span {
+      font-weight: 500;
+    }
+  
+    a {
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none !important;
+      text-transform: capitalize;
+      font-size: 14px;
+      @include transition(all, 0.2s);
+  
+      &:hover {
+        color: $mainColor;
+      }
+    }
+}
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Media Query */
+@media (max-width: 768px) {
+    /* NavBar */
+    nav .nav-contain > div:not(.nav-elements) {
+        width: 135%;
+        left: -41%;
+        transform: skewX(-45deg) translateX(-80%);
+    }
+}
+@media (max-width: 576px) {
+    /* NavBar */
+    nav {
+        height: 85px;
+    }
+    nav .nav-contain {
+        top: -46px;
+    }
+    .nav-btn {        
+        left: calc(100% - 65px) !important;
+    }
+    nav .logo {
+        left: 15px !important;
+
+        img {
+            max-width: 80px;
+        }
+      }
+    nav .nav-contain > div:not(.nav-elements) {
+        width: 100%;
+        left: -100%;
+        transform: skewX(0) translateX(0) !important;        
+    }
+    nav .nav-contain .nav-layer-1.show {
+        transform: skewX(0) translateX(0) !important;
+        width: 100%;
+        left: 0;
+    }
+    nav {        
+        .nav-layer-2.show {
+            display: none;
+        }
+        .nav-layer-3.show {
+            display: none;;
+        }
+        .nav-layer-4.show {
+            display: none;
+        }
+    }
+    /* Footer */
+    footer {
+        text-align: left !important;
+    }
+}
+

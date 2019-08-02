@@ -1,0 +1,571 @@
+// Start Import SCSS Files
+@import "all-scss-files";
+//-----------------------------------------
+
+/* Start Header Style */
+header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../images/header/bg-08.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+
+    /* Header Overlay */
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include full-contain;
+        background: rgba(0, 0, 0, .4);
+        z-index: 1;
+    }
+
+    /* Logo Contain */
+    .logo-contain {
+        position: absolute;
+        @include traCenter;
+        z-index: 2;
+        background: rgba(255, 255, 255, .8);
+        padding: 20px;
+
+        img {
+            width: 300px;
+            animation-name: blurPix;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    .logo-contain:before {
+        content: "";
+        position: absolute;
+        background: transparent;
+        height: 110%;
+        width: 105%;
+        border: 3px solid rgba(255, 255, 255, .8);
+        @include traCenter;
+    }
+
+    @keyframes blurPix {
+        0% {
+            filter: contrast(100%);
+        }
+
+        50% {
+            filter: contrast(200%);
+        }
+
+        100% {
+            filter: contrast(100%);
+        }
+    }
+}
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Gallery Style */
+section.gallery {
+    @include s-padding;
+    position: relative;
+    background: url(../images/header/bg-07.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include full-contain;
+        background: #000;
+        opacity: .8;
+    }
+
+    .content {
+        .modal {
+            .modal-footer {
+
+                a {
+                    background: $mainColor;
+                    color: #fff;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50% !important;
+                    @include flex-center;
+                    @include transition(all, .2s);
+                    cursor: pointer;
+
+                    i {
+                        line-height: 30px;
+                    }
+
+                    &:hover {
+                        background: transparent;
+                    }
+                }
+
+                .btn-fb {
+                    background: $facebook;
+
+                    &:hover {
+                        color: $facebook;
+                    }
+                }
+
+                .btn-tw {
+                    background: $twitter;
+
+                    &:hover {
+                        color: $facebook;
+                    }
+                }
+
+                .btn-gplus {
+                    background: $google-p;
+
+                    &:hover {
+                        color: $google-p;
+                    }
+                }
+
+                .btn-ins {
+                    background: $linkedIn;
+
+                    &:hover {
+                        color: $linkedIn;
+                    }
+                }
+
+                button {
+                    border-radius: 500px;
+                    border-color: $mainColor;
+                    color: $mainColor;
+
+                    &:hover {
+                        background: $mainColor;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .row > div {
+            margin-bottom: 30px !important;
+        }
+
+        .poster {
+            position: relative;
+            display: block;
+            height: 275;
+            width: 255;
+            cursor: pointer;
+
+            .show-btn {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 50px;
+                height: 50px;
+                background: rgba(255, 255, 255, .4);
+                padding: 10px;
+                @include flex-center;
+                @include transition(all, .3s);
+
+                i {
+                    font-size: 30px;
+                    color: #fff;
+                }
+            }
+
+            &:hover .show-btn {
+                background: rgba(0, 0, 0, .4);
+                @include full-contain;
+            }
+        }
+    }
+}
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Events Style */
+section.events {
+    position: relative;
+    @include s-padding;
+    background: url(../images/bg/bg-01.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include full-contain;
+        background: #000;
+        opacity: .8;
+    }
+
+
+    .content {
+        .row > div {
+            margin-bottom: 30px !important;
+        }
+
+        .item {
+            position: relative;
+
+            .img-contain {
+                position: relative;
+                max-height: 300px;
+                overflow: hidden;
+
+                img {
+                    max-height: 300px;
+                    @include transition(all, .3s);
+                }
+
+                .date {
+                    position: absolute;
+                    width: fit-content;
+                    padding: 0 20px;
+                    background: $mainColor;
+                    left: 0;
+                    bottom: 0;
+                    text-transform: capitalize;
+                    z-index: 3;
+
+                    span {
+                        color: #fff;
+                        font-size: 40px;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .item-footer {
+                background: $logoColor;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                p {
+                    color: #fff;
+                    font-size: 24px;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                }
+
+                small {
+                    color: #fff;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                }
+
+                a {
+                    background-color: #fff;
+                    color: $mainColor;
+                    padding: 15px 10px;
+                    border: 1px solid #fff;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 600;
+                    border-radius: 4px;
+                    line-height: 14px;
+                    outline: none;
+                    @include flex-center;
+                    @include transition(all, .2s);
+
+                    &:hover {
+                        background: $mainColor;
+                        border-color: $mainColor;
+                        color: #fff;
+                    }
+                }
+            }
+
+            &:hover img {
+                filter: brightness(70%);
+            }
+        }
+    }
+}
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start News Style */
+section.news {
+    position: relative;
+    @include s-padding;
+    background: url(../images/news/bg-07.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include full-contain;
+        background: #000;
+        opacity: .8;
+    }
+
+    .content {
+        .item {
+            .card {
+                border: none;
+                color: $logoColor;
+
+                img {
+                    @include transition(all, .3s);
+                }
+
+                h4 {
+                    font-size: 20px;
+                    color: #000;
+                    text-decoration: none;
+                    display: block;
+                    margin-bottom: 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 26px;
+                    margin-bottom: 30px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .read-btn {
+                    background-color: transparent;
+                    border: 1px solid $logoColor;
+                    color: $logoColor;
+                    border-radius: 4px;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    @include transition(all, .2s);
+                    cursor: pointer;
+                    outline: none;
+
+                    &:hover {
+                        background: $mainColor;
+                        border-color: $mainColor;
+                        color: #fff;
+                    }
+                }
+
+                .card-text {
+                    max-height: 316px;
+                    overflow: hidden;
+                }
+            }
+
+            &:hover img {
+                filter: brightness(70%);
+                position: static;
+            }
+        }
+    }
+    .owl-nav {
+        text-align: center;
+        button {
+            font-size: 40px !important;
+            color: #fff !important;
+            outline: none !important;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }            
+        }
+    }
+    .owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+        -ms-touch-action: auto;
+            touch-action: auto;
+    }
+}
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Why Us Section */
+section.why-us {
+    position: relative;
+    @include s-padding;
+    background: url(../images/why-us/bg-01.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    /* Overlay */
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include full-contain;
+        background: #000;
+        opacity: .9;
+    }
+
+    /* Content */
+    .content {
+        position: relative;
+        margin-bottom: 30px;
+
+        .details {
+            font-size: 20px;
+            text-align: center;
+            color: rgba(255,255,255,.7);
+            margin-bottom: 30px;
+        }          
+    }
+}
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Art Fair Video */
+/* Button */
+.video-btn {
+    background:#fff;
+    color: $logoColor;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    @include flex-center;
+    position: fixed;
+    top: calc(100% - 45px);
+    left: calc(100% - 85px);
+    transform: translateY(-50%) rotate(0deg);
+    z-index: 5;
+    cursor: pointer;
+    outline: none !important;
+    @include transition(all ,.5s);
+    i {
+        color: $logoColor;
+        font-size: 30px;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        @include traCenter;
+        height: 65px;
+        width: 65px;
+        border: 2px solid #fff;
+        opacity: .7;
+        border-radius: 50%;
+        animation: r_size 2s linear infinite;
+    }
+}
+.video-btn.hide {
+    left: 105% !important;
+}
+/* Modal */
+#artfairvideo {
+    padding-right: 0 !important;
+    .modal-dialog {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal-content {
+        background: rgba(0, 0, 0, .7);
+        height: auto;
+        min-height: 100%;
+        border-radius: 0;
+    }
+    iframe {
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+        margin: 0 auto;
+        display: block;
+    }
+    &.fade .modal-dialog {
+        transition: none;
+        -webkit-transform: translate(0,-50%) !important;
+        transform: translate(0, -50%) !important;
+    }
+    .modal-footer {
+        padding: 16px 30px;
+
+        button {
+            background-color: rgba(0,0,0,.7);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 25px;
+            outline: none !important;
+            border-radius: 50%;
+            @include flex-center;
+            cursor: pointer;
+            @include transition(all, .2s);
+            &:hover {
+                background-color: rgba(0, 0, 0, 1);
+            }
+        }
+    }
+}
+
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Media Query */
+@media (max-width: 991px) {
+  section.events .content .item .img-contain .date span {
+    font-size: 45px;
+  }
+}
+@media (max-width: 768px) {
+  section.events .content .item .img-contain .date span {
+    font-size: 35px;
+  }
+  section.events .content .item .item-footer p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  section.events .content .item .item-footer a {
+    font-size: 11px;
+    line-height: 11px;
+    padding: 10px;
+  }
+}
+@media (max-width: 576px) {
+    section.gallery .content .row > div,
+    section.events .content .row > div {
+        margin-bottom: 15px !important;
+        .item-footer {            
+            padding: 14px;
+        }
+    }
+    section.events .content .item .item-footer small {
+        display: block;
+        width: 90%;
+    }
+    section.events .content .item .img-contain .date span {
+        font-size: 30px
+    }
+    section.why-us .content .details {
+        font-size: 17px;
+    }
+    /* Video Button */
+    .video-btn {
+        left: calc(100% - 65px) !important;
+    }
+}

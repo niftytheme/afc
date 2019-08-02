@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  src: url(../fonts/DroidKufi/DroidKufi-Regular.ttf), url(../fonts/DroidKufi/DroidKufi-Bold.arabic); }
+*:not(i) {
+  font-family: 'Droid Arabic Kufi', sans-serif !important;
+  letter-spacing: 0 !important; }
+
+body {
+  direction: rtl; }
+
+.mr-4, .mx-4 {
+  margin-left: 1.5rem !important;
+  margin-right: 0 !important; }
+
+.ml-4, .mx-4 {
+  margin-right: 1.5rem !important;
+  margin-left: 0 !important; }
+
+.dir-ltr {
+  direction: ltr; }
+
+/* NavBar Style */
+nav {
+  right: 0; }
+  nav .nav-btn {
+    right: calc(100% - 85px); }
+  nav .logo {
+    left: calc(100% - 155px);
+    right: 35px; }
+  nav .nav-contain {
+    /* Start NavBar Elements / Links */ }
+    nav .nav-contain > div:not(.nav-elements) {
+      right: -20%;
+      left: 100%;
+      transform: skewX(45deg) translateX(80%); }
+    nav .nav-contain .nav-layer-1 {
+      overflow: hidden; }
+      nav .nav-contain .nav-layer-1 .lang-bar {
+        position: relative !important;
+        left: 0% !important;
+        justify-content: flex-end;
+        background: #1d1d1d !important;
+        opacity: 0; }
+        nav .nav-contain .nav-layer-1 .lang-bar .a-contain {
+          margin-left: 0;
+          position: absolute;
+          right: 15px; }
+    nav .nav-contain .nav-layer-1.show {
+      transform: skewX(45deg) translateX(70%) !important; }
+      nav .nav-contain .nav-layer-1.show .lang-bar {
+        left: 0 !important; }
+    nav .nav-contain .nav-layer-2.show {
+      transform: skewX(45deg) translateX(60%) !important;
+      opacity: .7; }
+    nav .nav-contain .nav-layer-3.show {
+      transform: skewX(45deg) translateX(50%) !important;
+      opacity: .4; }
+    nav .nav-contain .nav-layer-4.show {
+      transform: skewX(45deg) translateX(40%) !important;
+      opacity: .2; }
+    nav .nav-contain .nav-elements {
+      right: 20px; }
+      nav .nav-contain .nav-elements ul {
+        text-align: right;
+        width: 0;
+        -webkit-transition: all .7s ease-in-out;
+        -moz-transition: all .7s ease-in-out;
+        -ms-transition: all .7s ease-in-out;
+        -o-transition: all .7s ease-in-out;
+        transition: all .7s ease-in-out; }
+        nav .nav-contain .nav-elements ul li a:hover {
+          padding-left: 0;
+          padding-right: 20px; }
+      nav .nav-contain .nav-elements .show {
+        width: 100%; }
+
+/* Last News Style */
+#scroll-news {
+  direction: ltr; }
+
+/* Start Events Page */
+section.events .content .item .img-contain .date span {
+  font-size: 40px; }
+
+/* Language form */
+#lang {
+  left: -105px;
+  text-align: right; }
+
+/* Art Fair Video */
+/* Button */
+.video-btn {
+  right: calc(100% - 85px); }
+
+.video-btn.hide {
+  right: 105% !important; }
+
+/* About Us Page */
+#why-us-page .company-profile ul {
+  padding-left: 40px;
+  padding-right: 70px; }
+#why-us-page .v-m .head {
+  border-right: 2px solid #0084ff;
+  border-left: none;
+  padding-left: 0;
+  padding-right: 20px; }
+#why-us-page .v-m .mission-col .contain {
+  padding: 0 5px; }
+#why-us-page .why-us p {
+  padding-right: 15px;
+  padding-left: 0; }
+#why-us-page .why-us ul li {
+  padding-right: 20px;
+  padding-left: 0; }
+
+#contact-page .contact-body .main-contain .contain .c-content ul li:not(:last-child) {
+  margin-right: 0;
+  margin-left: 20px; }
+#contact-page .contact-body .main-contain .contain .c-content ul li i {
+  margin-right: 0;
+  margin-left: 20px; }
+
+/* Start Media Query */
+@media (max-width: 576px) {
+  nav .logo {
+    left: calc(100% - 135px) !important;
+    right: auto; }
+
+  nav .nav-contain > div:not(.nav-elements) {
+    width: 0;
+    left: 100%;
+    right: 0;
+    transform: skewX(0) translateX(0) !important; }
+
+  nav .nav-contain .nav-layer-1.show {
+    transform: skewX(0) translateX(0) !important; }
+    nav .nav-contain .nav-layer-1.show .lang-bar {
+      opacity: 1; }
+
+  .nav-btn {
+    right: calc(100% - 65px) !important; }
+
+  .video-btn {
+    right: calc(100% - 65px); } }
+
+/*# sourceMappingURL=style-rtl.css.map */

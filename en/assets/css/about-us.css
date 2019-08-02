@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  src: url(../fonts/DroidKufi/DroidKufi-Regular.ttf), url(../fonts/DroidKufi/DroidKufi-Bold.arabic); }
+/* Start Main Class */
+html,
+body {
+  overflow-x: hidden !important;
+  overflow-y: hidden; }
+
+.s-head {
+  margin-bottom: 70px; }
+  .s-head h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 36px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 20px;
+    color: #fff; }
+    .s-head h1 span {
+      color: #0084ff; }
+    .s-head h1:after {
+      background-color: #0084ff;
+      content: "";
+      position: absolute;
+      left: 50%;
+      height: 2px;
+      bottom: 5px;
+      width: 218px;
+      margin-left: -109px; }
+    .s-head h1:before {
+      background-color: #0084ff;
+      content: "";
+      position: absolute;
+      left: 50%;
+      height: 1px;
+      bottom: 0;
+      width: 150px;
+      margin-left: -75px; }
+
+.button-contain {
+  position: relative;
+  padding-top: 40px;
+  text-align: center; }
+
+.show-more-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .show-more-btn:hover {
+    border-color: #0084ff;
+    color: #fff;
+    text-decoration: none; }
+
+/* Modal */
+.modal-dialog {
+  max-width: 70%;
+  top: 50%;
+  transform: translateY(-50%) !important;
+  margin: 0 auto; }
+
+*:not(i) {
+  font-family: 'Montserrat', sans-serif !important;
+  letter-spacing: 1px; }
+
+body {
+  position: relative;
+  padding: 0 !important; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #555; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #262626; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1d1d1d; }
+
+/* Start Media Query */
+@media (max-width: 576px) {
+  .modal-dialog {
+    max-width: 90%; }
+
+  .modal-footer span {
+    display: none; }
+
+  .s-head h1 {
+    font-size: 27px; }
+
+  .show-more-btn {
+    font-size: 16px; } }
+/* Body Style */
+body {
+  background: #1d1d1d; }
+
+/* NavBar Style */
+nav .logo {
+  display: flex !important; }
+
+/* Head Class */
+.head {
+  border-left: 2px solid #0084ff;
+  padding-left: 20px;
+  color: #fff; }
+  .head h3 {
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0; }
+    .head h3 span {
+      font-weight: normal;
+      color: #0084ff;
+      text-transform: capitalize; }
+  .head p {
+    font-size: 17px; }
+
+/*-----------------------------------------
+-----------------------------------------*/
+/* Start About Head */
+.about-head {
+  padding: 140px 0 70px;
+  background-color: #262626; }
+  .about-head .s-head {
+    margin: 0 !important; }
+
+/*-----------------------------------------
+-----------------------------------------*/
+/* Start Company Profile */
+.company-profile {
+  position: relative;
+  padding: 70px 0; }
+  .company-profile strong {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 40px;
+    display: block; }
+  .company-profile ul {
+    padding-left: 70px; }
+    .company-profile ul li {
+      color: #fff;
+      font-size: 17px;
+      padding-left: 20px;
+      line-height: 26px; }
+      .company-profile ul li:not(:last-child) {
+        margin-bottom: 40px; }
+      .company-profile ul li.l-t-none {
+        list-style-type: none;
+        font-weight: bold;
+        font-size: 17px; }
+
+/*-----------------------------------------
+-----------------------------------------*/
+/* Start Our Mission And Vision */
+.v-m {
+  position: relative;
+  padding: 70px 0;
+  background: #262626; }
+  .v-m .contain .body {
+    margin-top: 30px; }
+    .v-m .contain .body p {
+      color: #fff;
+      font-size: 17px;
+      line-height: 26px;
+      margin-bottom: 15px; }
+    .v-m .contain .body .item {
+      margin-bottom: 15px; }
+      .v-m .contain .body .item strong {
+        color: #fff;
+        margin-bottom: 15px;
+        display: block; }
+      .v-m .contain .body .item p {
+        opacity: .7; }
+  .v-m .mission-col {
+    background-color: rgba(38, 38, 38, 0.6); }
+    .v-m .mission-col .contain {
+      padding: 20px 5px; }
+
+/*-----------------------------------------
+-----------------------------------------*/
+/* Start Company Profile */
+.why-us {
+  position: relative;
+  padding: 70px 0; }
+  .why-us p {
+    padding-left: 55px;
+    color: #fff;
+    font-size: 17px; }
+  .why-us strong {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 40px;
+    display: block; }
+  .why-us ul {
+    padding-left: 70px; }
+    .why-us ul li {
+      color: #fff;
+      font-size: 17px;
+      padding-left: 20px;
+      line-height: 26px; }
+      .why-us ul li:not(:last-child) {
+        margin-bottom: 20px; }
+      .why-us ul li.l-t-none {
+        list-style-type: none;
+        font-weight: bold;
+        font-size: 17px; }
+
+/*-----------------------------------------
+-----------------------------------------*/
+/* Start Media Query */
+@media (max-width: 576px) {
+  /* Head Class */
+  .head h3 {
+    font-size: 25px; }
+  .head p {
+    font-size: 16px; }
+
+  /* Company Profile */
+  .company-profile strong {
+    font-size: 20px; }
+
+  .company-profile ul {
+    padding-left: 40px; }
+    .company-profile ul li {
+      font-size: 16px; }
+
+  .company-profile ul li {
+    padding-left: 10px; }
+
+  .why-us ul li {
+    padding-left: 10px; }
+
+  /* Start Company Profile */
+  .why-us p {
+    padding-left: 25px;
+    color: #fff;
+    font-size: 16px; }
+  .why-us strong {
+    font-size: 25px; }
+  .why-us ul {
+    padding-left: 40px; }
+    .why-us ul li {
+      font-size: 16px; }
+      .why-us ul li.l-t-none {
+        font-size: 16px; } }
+
+/*# sourceMappingURL=about-us.css.map */

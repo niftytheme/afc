@@ -1,0 +1,169 @@
+// Start Import SCSS Files
+@import "all-scss-files";
+//-----------------------------------------
+
+/* Start NavBar Style */
+.logo {
+    display: flex !important;
+}
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Gallery Section Style */
+#gallery {
+    padding: 170px 0 70px;
+    position: relative;
+    background: url(../images/bg/bg-01.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 98vh;
+    /* Overlay */
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include full-contain;
+        background: rgba(0, 0, 0, .6);
+    }
+    /* Filter */
+    .filter {
+        position: relative;
+        ul {
+            padding: 0;
+            margin: 0;
+            @include flex-center;
+            li {
+                list-style-type: none;
+                color: #fff;
+                font-size: 20px;
+                padding: 10px 20px;
+                border-bottom: 1px solid #fff;
+                text-transform: capitalize;
+                margin: 0 5px;
+                cursor: pointer;
+                /* Transition */
+                @include transition(all, .2s);
+                &:hover {
+                    border-color: $mainColor;
+                }
+                &.active {                    
+                    border-color: $mainColor;
+                }
+            }
+        }
+    }
+    /* Content */
+    .content {
+        padding-top: 70px;
+        .modal {
+            .modal-footer {
+                a {
+                    background: $mainColor;
+                    color: #fff;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50% !important;
+                    @include flex-center;
+                    @include transition(all, .2s);
+                    cursor: pointer;
+
+                    i {
+                        line-height: 30px;
+                    }
+
+                    &:hover {
+                        background: transparent;
+                    }
+                }
+
+                .btn-fb {
+                    background: $facebook;
+
+                    &:hover {
+                        color: $facebook;
+                    }
+                }
+
+                .btn-tw {
+                    background: $twitter;
+
+                    &:hover {
+                        color: $facebook;
+                    }
+                }
+
+                .btn-gplus {
+                    background: $google-p;
+
+                    &:hover {
+                        color: $google-p;
+                    }
+                }
+
+                .btn-ins {
+                    background: $linkedIn;
+
+                    &:hover {
+                        color: $linkedIn;
+                    }
+                }
+
+                button {
+                    border-radius: 500px;
+                    border-color: $mainColor;
+                    color: $mainColor;
+
+                    &:hover {
+                        background: $mainColor;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .row > div {
+            margin-bottom: 30px !important;
+        }
+        .poster {
+            position: relative;
+            display: block;
+            height: 275;
+            width: 255;
+            cursor: pointer;
+
+            .show-btn {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 50px;
+                height: 50px;
+                background: rgba(255, 255, 255, .4);
+                padding: 10px;
+                @include flex-center;
+                @include transition(all, .3s);
+
+                i {
+                    font-size: 30px;
+                    color: #fff;
+                }
+            }
+
+            &:hover .show-btn {
+                background: rgba(0, 0, 0, .4);
+                @include full-contain;
+            }
+        }
+    }
+}
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Media Query */
+@media (max-width: 576px) {
+    #gallery .content .row > div {
+        margin-bottom: 15px !important;
+    }
+    #gallery .filter ul li {
+        font-size: 16px;
+    }
+}

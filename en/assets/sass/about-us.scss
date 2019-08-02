@@ -1,0 +1,232 @@
+// Start Import SCSS Files
+@import "all-scss-files";
+//-----------------------------------------
+
+/* Body Style */
+body {
+  background: #1d1d1d;
+}
+
+/* NavBar Style */
+nav .logo {
+  display: flex !important;
+}
+
+/* Head Class */
+.head {
+  border-left: 2px solid $mainColor;
+  padding-left: 20px;
+  color: #fff;
+
+  h3 {
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    span {
+      font-weight: normal;
+      color: $mainColor;
+      text-transform: capitalize;
+    }
+  }
+
+  p {
+    font-size: 17px;
+  }
+}
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start About Head */
+.about-head {
+  padding: 140px 0 70px;
+  background-color: $logoColor;
+  .s-head {
+    margin: 0 !important;
+  }
+}
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Company Profile */
+.company-profile {
+  position: relative;
+  padding: 70px 0;
+
+  strong {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  ul {
+    padding-left: 70px;
+
+    li {
+      color: #fff;
+      font-size: 17px;
+      padding-left: 20px;
+      line-height: 26px;
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+      &.l-t-none {
+        list-style-type: none;
+        font-weight: bold;
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Our Mission And Vision */
+.v-m {
+  position: relative;
+  padding: 70px 0;
+  background: $logoColor;
+
+  .contain {
+
+    .body {
+      margin-top: 30px;
+
+      p {
+        color: #fff;
+        font-size: 17px;
+        line-height: 26px;
+        margin-bottom: 15px;
+      }
+      .item {
+        margin-bottom: 15px;
+        strong {
+          color: #fff;
+          margin-bottom: 15px;
+          display: block;
+        }
+
+        p {
+          opacity: .7;
+        }
+      }
+    }
+  }
+
+  .mission-col {
+    background-color: rgba(38, 38, 38, .6);
+
+    .contain {
+      padding: 20px 5px;
+    }
+  }
+}
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Company Profile */
+.why-us {
+  position: relative;
+  padding: 70px 0;
+
+  p {
+    padding-left: 55px;
+    color: #fff;
+    font-size: 17px;
+  }
+
+  strong {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  ul {
+    padding-left: 70px;
+
+    li {
+      color: #fff;
+      font-size: 17px;
+      padding-left: 20px;
+      line-height: 26px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      &.l-t-none {
+        list-style-type: none;
+        font-weight: bold;
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+/* Start Media Query */
+@media (max-width: 576px) {
+  /* Head Class */
+  .head {
+
+    h3 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+
+  /* Company Profile */
+  .company-profile strong {
+    font-size: 20px;
+  }
+  .company-profile ul {
+    padding-left: 40px;
+
+    li {
+      font-size: 16px;
+    }
+  }
+  .company-profile ul li {
+    padding-left: 10px;
+  }
+  .why-us ul li {
+    padding-left: 10px;
+  }
+
+  /* Start Company Profile */
+  .why-us {
+
+    p {
+      padding-left: 25px;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    strong {
+      font-size: 25px;
+    }
+
+    ul {
+      padding-left: 40px;
+
+      li {
+        font-size: 16px;
+        &.l-t-none {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

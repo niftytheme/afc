@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  src: url(../fonts/DroidKufi/DroidKufi-Regular.ttf), url(../fonts/DroidKufi/DroidKufi-Bold.arabic); }
+/* Start Main Class */
+html,
+body {
+  overflow-x: hidden !important;
+  overflow-y: hidden; }
+
+.s-head {
+  margin-bottom: 70px; }
+  .s-head h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 36px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 20px;
+    color: #fff; }
+    .s-head h1 span {
+      color: #0084ff; }
+    .s-head h1:after {
+      background-color: #0084ff;
+      content: "";
+      position: absolute;
+      left: 50%;
+      height: 2px;
+      bottom: 5px;
+      width: 218px;
+      margin-left: -109px; }
+    .s-head h1:before {
+      background-color: #0084ff;
+      content: "";
+      position: absolute;
+      left: 50%;
+      height: 1px;
+      bottom: 0;
+      width: 150px;
+      margin-left: -75px; }
+
+.button-contain {
+  position: relative;
+  padding-top: 40px;
+  text-align: center; }
+
+.show-more-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .show-more-btn:hover {
+    border-color: #0084ff;
+    color: #fff;
+    text-decoration: none; }
+
+/* Modal */
+.modal-dialog {
+  max-width: 70%;
+  top: 50%;
+  transform: translateY(-50%) !important;
+  margin: 0 auto; }
+
+*:not(i) {
+  font-family: 'Montserrat', sans-serif !important;
+  letter-spacing: 1px; }
+
+body {
+  position: relative;
+  padding: 0 !important; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #555; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #262626; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1d1d1d; }
+
+/* Start Media Query */
+@media (max-width: 576px) {
+  .modal-dialog {
+    max-width: 90%; }
+
+  .modal-footer span {
+    display: none; }
+
+  .s-head h1 {
+    font-size: 27px; }
+
+  .show-more-btn {
+    font-size: 16px; } }
+/* Loading Style */
+.loading {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #262626;
+  opacity: .9;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .loading .main .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px; }
+  .loading .main .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    margin: 6px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent; }
+  .loading .main .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s; }
+  .loading .main .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s; }
+  .loading .main .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s; }
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=loading.css.map */

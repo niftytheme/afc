@@ -1,0 +1,28 @@
+// Fonts
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    font-style: normal;
+    src: url(../fonts/DroidKufi/DroidKufi-Regular.ttf),
+         url(../fonts/DroidKufi/DroidKufi-Bold.arabic);
+}
+*:not(i) {
+    font-family: 'Droid Arabic Kufi', sans-serif !important;
+    letter-spacing: 0 !important;
+}
+
+body {
+    direction: rtl;
+}
+
+// Bootstrap Class
+.mr-4, .mx-4 {
+    margin-left: 1.5rem !important;
+    margin-right: 0 !important;
+  }
+  .ml-4, .mx-4 {
+    margin-right: 1.5rem !important;
+    margin-left:  0 !important;
+  }
+  .dir-ltr {
+      direction: ltr;
+  }

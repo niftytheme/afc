@@ -1,0 +1,1 @@
+sass --watch E:\Web\Sites\My-Work\Art-Fair-Cairo\en\assets\sass:E:\Web\Sites\My-Work\Art-Fair-Cairo\en\assets\css
